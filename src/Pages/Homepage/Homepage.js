@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Homepage.css";
 import Card from "../../Components/Cards/Card";
@@ -6,8 +6,29 @@ import SmallCards from "../../Components/Cards/SmallCards";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const handleScroll = () => {
+        const section = document.getElementById("dark-section");
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition >= sectionTop - sectionHeight / 1) {
+            setIsDarkMode(true);
+        } else {
+            setIsDarkMode(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <div className="homepage-container">
+        <div className={`homepage-container ${isDarkMode ? "dark-mode" : ""}`}>
             <Navbar />
             <div className="carousel-container">
                 <div className="carousel-content">
@@ -81,34 +102,18 @@ const Homepage = () => {
                             <SmallCards src={"/Asserts/Products/3.webp"} name="Phone Covers" price="499." priceDecimal="99" />
                         </div>
                     </div>
-                    {/*
-                    <div className="big-card">
-                        <Card src={"/Asserts/Products/1.png"} name="Apple Airpods" />
-                        <Card src={"/Asserts/Products/6.png"} name="Apple Airpods Max" />
-                    </div>
-                    <div className="small-card-container">
-                        <div className="upper-small">
-                            <div className="small-card-div">
-                                <SmallCards src={"/Asserts/Products/2.png"} name="iWatch" price="1999." priceDecimal="99" />
-                            </div>
-                            <div className="small-card-div">
-                                <SmallCards src={"/Asserts/Products/3.webp"} name="Phone Covers" price="499." priceDecimal="99" />
-                            </div>
-                        </div>
-                        <div className="lower-small">
-                            <div className="small-card-div">
-                                <SmallCards src={"/Asserts/Products/4.png"} name="Screen Protector" price="349." priceDecimal="00" />
-                            </div>
-                            <div className="small-card-div">
-                                <SmallCards src={"/Asserts/Products/5.png"} name="Phones" price="Starts @19999." priceDecimal="00" />
-                            </div>
-                        </div>
-    </div>*/}
                 </div>
+            </section>
 
+            <section id="dark-section" className="dark-section">
+                <h3>Magical experience</h3>
+                <h1><span className="glowing-text">Airpods Pro Clone</span><br/>First Copy</h1>
+                <h3>Experience the Authentic Apple Airpods Pro Vibes – Instant Popup Connection, Battery Level Display, and More! 🎧🔋 
+                    <br/>Ready to Elevate Your Audio? Secure Yours Today!</h3>
             </section>
         </div>
     );
 }
+
 
 export default Homepage;
