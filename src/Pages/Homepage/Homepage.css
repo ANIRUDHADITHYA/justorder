@@ -1,0 +1,139 @@
+/* Homepage styles */
+.homepage-container {
+    height: 100%;
+}
+
+.carousel-item {
+    margin: 0;
+    height: calc(100vh - 80px);
+}
+
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (prefers-reduced-motion:reduce) {
+    .carousel-indicators li {
+        transition: none
+    }
+}
+
+.carousel-indicators .active {
+    opacity: 1
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 10;
+    right: 5%;
+    top: 0%;
+    bottom: 0%;
+    left: 15%;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    text-align: right;
+    width: 50%;
+    height: fit-content;
+    margin-left: auto;
+    overflow: hidden;
+
+}
+
+
+.carousel-caption .UHT2 {
+    font-size: 120px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.carousel-caption h5 {
+    animation: 0.8s carousel-caption 0.8s forwards;
+    transform: translateX(-100%);
+}
+
+.carousel-caption .homeTemperature {
+    font-size: 25px;
+    font-style: italic;
+    animation: 0.5s carousel-caption 0.45s forwards;
+    transform: translateX(-100%);
+}
+
+.carousel-caption .UDTSubtitle {
+    font-size: 40px;
+    margin: 0;
+    animation: 0.5s carousel-caption 0.45s forwards;
+    transform: translateX(-100%);
+}
+
+.carousel-caption .shopBtn {
+    margin-top: 40px;
+    text-transform: uppercase;
+    animation: 0.5s carousel-caption 0.4s forwards;
+    transform: translateX(-100%);
+    color: #ff6600;
+}
+
+.carousel-caption .shopBtn a {
+    text-decoration: none;
+    color: white;
+}
+
+.carousel-caption .shopBtn span {
+    padding: 15px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.carousel-caption .shopBtn span:hover {
+    background-color: white;
+    color: #ff6600;
+}
+
+
+@media(max-width: 1070px) {
+
+    .carousel-caption .shopBtn span {
+        padding: 7px 14px;
+    }
+
+
+    .carousel-caption .shopBtn span {
+
+        display: flex;
+        width: 50%;
+        font-size: 14px;
+        margin-left: auto;
+        white-space: nowrap;
+        justify-content: center;
+    }
+
+    .carousel-caption .UHT2 {
+        font-size: 70px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+}
+
+
+@keyframes carousel-caption {
+    to {
+        transform: translateX(0);
+    }
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
