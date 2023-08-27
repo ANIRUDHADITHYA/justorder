@@ -195,7 +195,8 @@
 }*/
 
 
-.upper-layer, .lower-layer {
+.upper-layer,
+.lower-layer {
     display: flex;
     width: 100%;
 }
@@ -218,7 +219,7 @@
 
 }
 
-.big-card .card-container{
+.big-card .card-container {
     margin: 10px;
 }
 
@@ -236,27 +237,33 @@
     align-items: center;
     justify-content: center;
 }
+
 .shop-by-link li {
     list-style: none;
     margin: 10px 10px;
+    position: relative;
+    left: -20px;
 }
 
 
 /* Dark mode styles */
 .dark-mode {
-    background-color: rgba(0, 0, 0, 1); /* Dark background color */
+    background-color: rgba(0, 0, 0, 1);
+    /* Dark background color */
     color: #fff;
     transition: background-color .5s, color .5s;
 }
 
 /* Dark section styles */
 .dark-section {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: auto;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .dark-section h1 {
@@ -271,7 +278,7 @@
     width: 80%;
 }
 
-/* ... (other styles) */
+/* ... (multicolor text) */
 
 .glowing-text {
     background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00, #ff00ff);
@@ -282,16 +289,195 @@
 }
 
 @keyframes flowing {
-    0%, 100% {
+
+    0%,
+    100% {
         background-position: 0% 50%;
     }
+
     25% {
         background-position: 25% 50%;
     }
+
     50% {
         background-position: 50% 50%;
     }
+
     75% {
         background-position: 75% 50%;
     }
+}
+
+
+
+/* ... (video section) */
+
+.airpods-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.video-section {
+    flex: 1;
+    padding-top: 50px;
+}
+
+.video-section video {
+    width: 80%;
+}
+
+
+
+
+/* ... (text section styles) */
+
+.text-section {
+    flex: 1;
+    margin-top: 40px;
+}
+
+.text-section h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.text-section ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.text-section li {
+    margin-bottom: 5px;
+    list-style: none;
+    position: relative;
+    left: -20px;
+}
+
+.text-section button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.text-section button:hover {
+    background-color: #e55b00;
+}
+
+
+.text-section li {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #fff;
+    width: fit-content;
+    background: rgba(57, 57, 57, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(40, 40, 40, 0.55);
+}
+
+.dark-to-white {
+    background-color: rgb(238, 238, 238); /* Set the background color to white */
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition */
+    color: #101010;
+}
+
+/* light section styles */
+/* Modify the white section styles */
+.white-section {
+    height: 100%;
+    width: 98%;
+    margin: auto;
+}
+
+.slider-section {
+    height: 100%;
+    margin-top: 50px;
+    padding: 30px 10px;
+}
+
+.swiper-pagination {
+    margin-top: 30px;
+}
+
+.dark-to-white .swiper-button-prev:after, .dark-to-white .swiper-button-next:after{
+    
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    color: #ff6600;
+}
+
+.most-sold {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+
+}
+
+/**************justorder-features**********/
+
+.justorder-features {
+    width: 95%;
+    margin: 50px auto;
+}
+
+.why-jo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+.why-jo span {
+    color: #e55b00;
+}
+
+.feature-card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-card {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
 }
