@@ -8,7 +8,7 @@ const PopularCard = () => {
         <div className="popular-container">
             <div className="popular-card">
                 <div className="popular-imgBx">
-                    <img src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png" alt="nike-air-shoe" />
+                    <img src="/Asserts/Products/6.png" alt="nike-air-shoe" />
                 </div>
 
                 <div className="popular-contentBx">
