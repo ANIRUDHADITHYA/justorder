@@ -97,3 +97,11 @@
     padding: 0;
 }
 
+@media(max-width:900px){
+    .navbar-menu {
+        display: none;
+    }
+    .icon-container {
+        margin-right: 5px;
+    }
+}

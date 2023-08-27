@@ -5,7 +5,7 @@
 
 .card-container .single-card{
   position: relative;
-  width: 320px;
+  min-width: 320px;
   height: 480px;
   background: #232323;
   border-radius: 20px;
