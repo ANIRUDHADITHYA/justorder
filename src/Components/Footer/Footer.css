@@ -110,3 +110,15 @@
     max-width: 600px; /* Set your desired maximum width */
     padding: 0 10px 0 30px; /* Add some horizontal padding */
   }
+
+  @media(max-width:700px) {
+    .footer-columns {
+      flex-direction: column;
+    }
+    .footer-column {
+      margin-left: 30px;
+    }
+    .follow-us-section {
+      padding-top: 30px;
+    }
+  }

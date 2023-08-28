@@ -170,7 +170,6 @@ const Homepage = () => {
                                 autoplay
                                 loop
                                 src="https://lottie.host/0106fb3c-c3eb-4d7b-a9bf-8567e12c0be0/6osOuVneX6.json"
-                                style={{ height: '120px', width: '120px' }}
                             >
                             </Player>
                             <h3>Best Quality</h3>
@@ -181,21 +180,19 @@ const Homepage = () => {
                                 autoplay
                                 loop
                                 src="https://lottie.host/9d5dd77e-6493-4df6-a3c3-7562cc8e302f/hqwRU9dDAb.json"
-                                style={{ height: '120px', width: '120px' }}
                             >
                             </Player>
                             <h3>Referral Bonus</h3>
                             <p>Earn a referral bonus by sharing products with friends. Enjoy bonuses in your account.</p>
                         </div>
-                        <div className="feature-card">
+                        <div className="feature-card span">
                             <Player
                                 autoplay
                                 loop
                                 src="https://lottie.host/cdd8d138-79ef-44c2-81ec-8a2ab664eac8/ddbPeNpe8a.json"
-                                style={{ height: '90px', width: '90px' }}
                             >
                             </Player>
-                            <h3 style={{paddingTop:"15px"}}>7 Days Replacement</h3>
+                            <h3>7 Days Replacement</h3>
                             <p>We offer replacements for cases like Color or Item Mismatch, 
                                 and Damaged Items. T&C may be applicable.</p>
                         </div>
@@ -207,7 +204,6 @@ const Homepage = () => {
                                 autoplay
                                 loop
                                 src="https://lottie.host/ce502c73-2cc0-4725-96f0-7b05e5a97b0f/XS7nknqYTz.json"
-                                style={{ height: '120px', width: '120px' }}
                             >
                             </Player>
                             <h3>Fast Delivey</h3>
@@ -218,7 +214,6 @@ const Homepage = () => {
                                 autoplay
                                 loop
                                 src="https://lottie.host/471da03e-96b7-48f5-ba73-f88d1af37661/ZczG8rpS7e.json"
-                                style={{ height: '120px', width: '120px' }}
                             >
                             </Player>
                             <h3>Best Pricing</h3>
@@ -229,7 +224,6 @@ const Homepage = () => {
                                 autoplay
                                 loop
                                 src="https://lottie.host/78e7d98c-c724-4eaa-860d-2880a4966dbb/BQcxjI0ujq.json"
-                                style={{ height: '120px', width: '120px' }}
                             >
                             </Player>
                             <h3>Secure Checkouts</h3>

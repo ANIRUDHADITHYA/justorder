@@ -4,7 +4,6 @@
 }
 
 .carousel-item {
-    margin: 0;
     height: calc(100vh - 80px);
 }
 
@@ -149,7 +148,7 @@
 .popular-category h1 {
     padding-bottom: 15px;
     text-align: center;
-    font-size: 45px;
+    font-size: 3em;
     font-weight: 900;
 }
 
@@ -391,8 +390,10 @@
 }
 
 .dark-to-white {
-    background-color: rgb(238, 238, 238); /* Set the background color to white */
-    transition: background-color 0.5s ease-in-out; /* Add a smooth transition */
+    background-color: rgb(238, 238, 238);
+    /* Set the background color to white */
+    transition: background-color 0.5s ease-in-out;
+    /* Add a smooth transition */
     color: #101010;
 }
 
@@ -414,8 +415,9 @@
     margin-top: 30px;
 }
 
-.dark-to-white .swiper-button-prev:after, .dark-to-white .swiper-button-next:after{
-    
+.dark-to-white .swiper-button-prev:after,
+.dark-to-white .swiper-button-next:after {
+
     background: rgba(255, 255, 255, 0.6);
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8.8px);
@@ -444,6 +446,7 @@
     font-size: 30px;
     font-weight: 600;
 }
+
 .why-jo span {
     color: #e55b00;
 }
@@ -471,6 +474,18 @@
     border-radius: 10px;
     text-align: center;
 }
+.feature-card #lottie {
+    width: 90x;
+    height: 90px;
+}
+.feature-card.span #lottie {
+    width: 60px;
+    height: 60px;
+}
+
+.feature-card.span h3 {
+    padding-top: 15px;
+}
 
 .feature-card h3 {
     margin-top: 10px;
@@ -485,27 +500,49 @@
 
 
 
-@media(max-width:1100px){
+@media(max-width:1100px) {
     .carousel-item {
+        position: relative;
+        display: none;
+        float: left;
+        width: 100%;
         height: 100%;
+        margin-right: -100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: transform .6s ease-in-out;
     }
+
     .big-card .card-container .single-card {
         width: 90vw;
         margin: auto;
-    
+
     }
 
     .small-card-div .small-card {
         width: 43vw;
         margin: 20px auto;
-        
+
     }
+
     .lower-layer {
         flex-flow: wrap;
     }
+
+    .text-section h1{
+        font-size: 2em;
+    }
+    .text-section li {
+        font-size: 0.7em;
+    }
+
+    .text-section button {
+        font-size: 0.7em;
+    }
 }
 
-@media(max-width:700px){
+
+@media(max-width:700px) {
 
     .shop-by-link {
         flex-wrap: wrap;
@@ -522,7 +559,7 @@
     .small-card-div .small-card {
         width: 100%;
         margin: 20px auto;
-        
+
     }
 
     .small-card-div {
@@ -533,7 +570,75 @@
         width: 100%;
         margin: 20px auto;
     }
+
     .big-card {
         margin: 0px 10px;
     }
+
+    .airpods-desc {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .video-section {
+        padding: 0;
+        padding-top: 10px;
+        margin: 0;
+        width: 70%;
+    }
+
+    .video-section video {
+        width: 100%;
+        margin: auto;
+    }
+    .feature-card h3{
+        font-size: 0.7em;
+        margin: 2px;
+    }
+    .feature-card p {
+        font-size: 0.5em;
+        margin-top: 0px;
+    }
+
+    .feature-card #lottie {
+        width: 60x;
+        height: 60px;
+    }
+    .feature-card.span #lottie {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature-card.span h3 {
+        padding-top: 5px;
+    }
+    
+}
+
+@media(max-width:500px){
+    .popular-category h1 {
+        padding-bottom: 15px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 900;
+    }
+    .dark-section h1 {
+        font-size: 3em;
+    }
+
+    .dark-section h3  {
+        font-size: 1.3em;
+    }
+
+    .text-section h1 {
+        font-size: 2em;
+    }
+
+    .white-section h1 {
+        font-size: 2em;
+    }
+    
+    
+
+    
 }

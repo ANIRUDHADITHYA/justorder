@@ -192,7 +192,7 @@
 /***********small card**********/
 .small-card {
   position: relative;
-  width: 320px;
+  min-width: 320px;
   height: 480px;
   background: #191919;
   border-radius: 20px;

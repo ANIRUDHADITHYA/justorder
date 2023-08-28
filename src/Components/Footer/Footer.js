@@ -21,7 +21,7 @@ const Footer = () => {
                         <li><Link to="">FAQ</Link></li>
                     </ul>
                 </div>
-                <div className="footer-column">
+                <div className="footer-column span">
                     <div>
                         <h1>Need help?</h1>
                         <ul>
