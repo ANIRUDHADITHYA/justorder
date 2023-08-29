@@ -551,7 +551,7 @@
 
 .review-container {
   padding-left: 10px;
-  font-size: #484848;
+  color: #484848;
 }
 
 .rating-container i {
@@ -617,5 +617,56 @@
   .product-card-container {
     width: calc(50% - 10px);
   }
+  
+}
+
+
+@media(max-width:800px) {
+
+  .product-card-container {
+    width: calc(50% - 10px);
+  }
+
+  .product-info-container {
+    padding: 10px;
+  }
+  
+}
+
+@media(max-width:500px) {
+
+  .product-card-container {
+    width: calc(50% - 10px);
+  }
+
+.product-card-title{
+  font-size: 0.8em;
+}
+
+.product-pricing h4{
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #232323;
+}
+
+
+
+.product-pricing h5{
+  font-size: .6em;
+  font-weight: 500;
+  padding-left: 5px;
+  color: #484848;
+}
+
+
+.product-pricing h6{
+  font-size: 0.55em;
+  font-weight: 600;
+  color: green;
+  padding-left: 5px;
+}
+.product-review-rating h6 {
+  font-size: 0.7em;
+}
   
 }

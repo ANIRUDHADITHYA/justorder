@@ -197,4 +197,10 @@
     .product-section {
         margin: 0px;
     }
+    .product-container {
+        margin: 0px;
+    }
+    .filter-results {
+        padding: 10px;
+    }
 }
