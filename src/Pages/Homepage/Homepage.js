@@ -163,7 +163,7 @@ const Homepage = () => {
                     <Slider />
                 </div>
                 <div className="justorder-features">
-                    <h1 className="why-jo">Why JustOrder<span>.it</span> ?</h1>
+                    <h1 className="why-jo">Why JustTechify<span>.store</span> ?</h1>
                     <div className="features-container">
                         <div className="feature-card">
                             <Player

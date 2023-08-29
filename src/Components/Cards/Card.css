@@ -483,3 +483,139 @@
   font-size: 14px;
   color: white;
 }
+
+
+/*****************Product Card**********/
+
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(25% - 15px);
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  position: relative; 
+  transition: box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.product-card-container h3, .product-card-container h4, .product-card-container h5, .product-card-container h6 {
+  margin: 0px;
+}
+.product-image-container {
+  max-width: 600px;
+  max-height: 600px;
+  text-align: center;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  height: auto; /* Ensures the image maintains its aspect ratio */
+  object-fit: cover;
+}
+
+.product-card-title {
+  font-size: 0.95em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s;
+  color: #232323;
+  font-weight: 600;
+}
+
+
+
+.product-review-rating {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.product-review-rating h6 {
+  font-size: 0.9em;
+}
+
+.review-container {
+  padding-left: 10px;
+  font-size: #484848;
+}
+
+.rating-container i {
+  padding-left: 3px;
+  font-size: 10px;
+}
+.rating-container.green {
+  background-color: green;
+}
+
+.product-pricing {
+  display: flex;
+  align-items: center;
+}
+
+
+.product-pricing h4{
+  font-size: 1em;
+  font-weight: 600;
+  color: #232323;
+}
+
+
+
+.product-pricing h5{
+  font-size: .75em;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #484848;
+}
+
+
+.product-pricing h6{
+  font-size: 0.70em;
+  font-weight: 600;
+  color: green;
+  padding-left: 10px;
+}
+
+.product-info-container {
+  padding: 20px;
+}
+
+.product-card-container:hover .product-card-title {
+  color: #e55b00;
+}
+
+.product-card-container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media(max-width:1300px) {
+
+  .product-card-container {
+    width: calc(33.33% - 14px);
+  }
+  
+}
+
+@media(max-width:1024px) {
+
+  .product-card-container {
+    width: calc(50% - 10px);
+  }
+  
+}

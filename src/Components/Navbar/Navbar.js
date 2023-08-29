@@ -1,19 +1,21 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div>
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <h4>JustOrder<span>.it</span></h4>
+                    <h4><Link to="/">JustTechify<span>.store</span></Link></h4>
                 </div>
                 <div className="navbar-menu">
                     <ul>
-                        <li>Apple Airpods</li>
-                        <li>Apple Watches</li>
-                        <li>Imported Phones</li>
-                        <li>Other Products</li>
+                        <li><Link to="/products">All Products</Link></li>
+                        <li><Link to="/products">Apple Airpods</Link></li>
+                        <li><Link to="/products">Apple Watches</Link></li>
+                        <li><Link to="/products">Imported Phones</Link></li>
+                        <li><Link to="/products">Accessories</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-icons">

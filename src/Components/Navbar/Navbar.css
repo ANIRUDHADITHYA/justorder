@@ -35,6 +35,12 @@
     font-size: 14px;
     font-weight: 500;
     position: relative;
+    
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #333;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -46,13 +52,13 @@
 }
 
 /* Hover effect for list items */
-.navbar-menu li:hover {
+.navbar-menu li a:hover {
     color: #ff6600;
     transform: scale(1.03);
 }
 
 /* Underline effect on hover */
-.navbar-menu li::before {
+.navbar-menu li a::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -64,7 +70,7 @@
 }
 
 /* Expand the underline on hover */
-.navbar-menu li:hover::before {
+.navbar-menu li a:hover::before {
     width: 100%;
 }
 

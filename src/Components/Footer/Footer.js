@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="footer-container">
             <div className="footer-columns">
                 <div className="footer-column-content">
-                    <h1>JustOrder<span>.it</span></h1>
-                    <p>Experience justorder.it, your go-to online shop for a variety of premium cloned products at budget-friendly prices, adding a touch of fun to your shopping. Explore our collection of cloned goods, as well as genuine imported phones, screen protectors, covers, and more mobile accessories to elevate your shopping journey.</p>
+                    <h1>JustTechify<span>.store</span></h1>
+                    <p>Experience justtechify.store, your go-to online shop for a variety of premium cloned products at budget-friendly prices, adding a touch of fun to your shopping. Explore our collection of cloned goods, as well as genuine imported phones, screen protectors, covers, and more mobile accessories to elevate your shopping journey.</p>
                 </div>
                 <div className="footer-column">
                     <h1>Information</h1>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <ul>
                             <li><i class="fa-regular fa-envelope"></i> <Link to="">Create a Ticket</Link></li>
                             <li><i class="fa-brands fa-whatsapp"></i> <Link to="">+91 99999 99999</Link></li>
-                            <li><i class="fa-solid fa-at"></i> <Link to="">support@justorder.it</Link></li>
+                            <li><i class="fa-solid fa-at"></i> <Link to="">support@justtechify.store</Link></li>
                         </ul>
                     </div>
                     <div className='follow-us-section'>
@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-copyright">
-                <p>Copyright © 2023 justorder.it. All rights reserved.</p>
+                <p>Copyright © 2023 justtechify.store. All rights reserved.</p>
             </div>
         </div>
     );
