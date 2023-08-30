@@ -6,12 +6,14 @@
 .product-container {
     margin: 5px;
     display: flex;
-    justify-content: space-between;
+
 }
 
 .product-filter {
     width: 350px;
 }
+
+
 
 .product-section {
     width: 100%;
@@ -39,11 +41,17 @@
     align-items: center;
     padding-bottom: 15px;
 }
+.filter-close-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15px;
+}
 .filter-header h4 {
     font-size: 1.2em;
     font-weight: 600;
 }
-.filter-header button {
+.filter-header button, .filter-close-button button {
     border: none;
     background: transparent;
     font-size: 0.7em;
@@ -51,9 +59,23 @@
     transition: 0.3s;
     cursor: pointer;
 }
+.filter-close-button button {
+    text-transform: uppercase;
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.filter-close-button button i {
+    padding-right: 5px;
+}
 
 .filter-header button:hover {
     color: #ff6600;
+}
+.filter-close-button button:hover {
+    background-color: #ff6600;
 }
 
 .filter-tag {
@@ -173,6 +195,33 @@
     font-size: 1.3em;
 }
 
+.filter-button {
+    background-color: white;
+    margin: 0.7px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.filter-button i {
+    padding-right: 5px;
+}
+.filter-button h5 {
+    margin: 0px;
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-button h5:hover{
+    background-color: #ff6600;
+}
+
 .filter-results {
     display: flex;
     flex-wrap: wrap;
@@ -202,5 +251,16 @@
     }
     .filter-results {
         padding: 10px;
+    }
+    .filter-button {
+        display: flex;
+    }
+    .product-filter.active{
+        display: flex;
+        position: absolute; /* Use "fixed" instead of "absolute" to keep the sidebar fixed on the screen */
+        z-index: 1000;
+        background-color: white;
+        width: 100vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 }

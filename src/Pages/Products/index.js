@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Products.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
@@ -6,13 +6,17 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../../Components/Cards/ProductCard';
 
 const Products = () => {
+    const [filterBar, setFilterBar] = useState(false);
     return (
         <div className="product-page">
             <Navbar />
             <div className="product-container">
-                <div className="product-filter">
+                <div className={`product-filter ${filterBar ? 'active' : ''}`}>
                     <div className="filter-columns">
                         <div className='filter-column'>
+                            <div className='filter-close-button'>
+                                <button onClick={()=>{setFilterBar(false)}}><i class="fa-solid fa-xmark"></i> Close</button>
+                            </div>
                             <div className='filter-header'>
                                 <h4>Filters Used</h4>
                                 <button>CLEAR ALL</button>
@@ -125,6 +129,7 @@ const Products = () => {
                     <div className='filter-results-header'>
                         <h4>Shows 30 Products from "airpods"</h4>
                     </div>
+                    <div className='filter-button' onClick={()=>{setFilterBar(true)}}><h5><i class="fa-solid fa-filter"></i> Open Filter</h5></div>
                     <div className='filter-results'>
                         <ProductCard />
                         <ProductCard />
