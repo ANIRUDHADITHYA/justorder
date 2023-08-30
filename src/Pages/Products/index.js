@@ -7,15 +7,27 @@ import ProductCard from '../../Components/Cards/ProductCard';
 
 const Products = () => {
     const [filterBar, setFilterBar] = useState(false);
+    function handleFilterOutsider() {
+        if (filterBar) {
+            setFilterBar(false)
+        }
+    }
+    function handleFilterClick() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Add smooth scrolling behavior
+          });
+          setFilterBar(true)
+    }
     return (
-        <div className="product-page">
+        <div className={`product-page ${filterBar ? 'active' : ''}`}>
             <Navbar />
             <div className="product-container">
                 <div className={`product-filter ${filterBar ? 'active' : ''}`}>
                     <div className="filter-columns">
                         <div className='filter-column'>
                             <div className='filter-close-button'>
-                                <button onClick={()=>{setFilterBar(false)}}><i class="fa-solid fa-xmark"></i> Close</button>
+                                <button onClick={() => { setFilterBar(false) }}><i class="fa-solid fa-xmark"></i> Close</button>
                             </div>
                             <div className='filter-header'>
                                 <h4>Filters Used</h4>
@@ -125,12 +137,15 @@ const Products = () => {
                         </div>
                     </div>
                 </div>
-                <div className="product-section">
+                <div className={`product-section ${filterBar ? "active" : ""}`} onClick={handleFilterOutsider}>
+
                     <div className='filter-results-header'>
                         <h4>Shows 30 Products from "airpods"</h4>
                     </div>
-                    <div className='filter-button' onClick={()=>{setFilterBar(true)}}><h5><i class="fa-solid fa-filter"></i> Open Filter</h5></div>
+                    <div className='filter-button' onClick={handleFilterClick}><h5><i class="fa-solid fa-filter"></i> Open Filter</h5></div>
+
                     <div className='filter-results'>
+
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />
