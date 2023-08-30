@@ -331,3 +331,12 @@
 
     
 }
+
+@media(max-width:400px){
+    .product-filter.active{
+        width: 80vw;
+    }
+    .product-section.active .filter-results{
+        padding-bottom: 200px;
+    }
+}
