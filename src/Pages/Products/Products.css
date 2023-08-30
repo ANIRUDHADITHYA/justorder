@@ -42,10 +42,11 @@
     padding-bottom: 15px;
 }
 .filter-close-button {
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 15px;
+
 }
 .filter-header h4 {
     font-size: 1.2em;
@@ -262,5 +263,8 @@
         background-color: white;
         width: 100vw;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .filter-close-button {
+        display: flex;
     }
 }
